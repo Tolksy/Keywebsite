@@ -1,0 +1,157 @@
+/*- Global Styles -*/
+:root {
+  --primary-color: #007bff; /* A bright, professional blue */
+  --secondary-color: #6c757d; /* A neutral gray for text */
+  --background-color: #f8f9fa; /* A very light gray for the background */
+  --text-color: #343a40; /* A dark gray for main text */
+  --header-bg: #ffffff; /* White header */
+  --footer-bg: #343a40; /* Dark footer */
+  --footer-text: #f8f9fa; /* Light text for footer */
+  --font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  line-height: 1.6;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+h1, h2, h3 {
+  font-weight: 300; /* Lighter font weight for a modern feel */
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+/*- Header and Navigation -*/
+header {
+  background: var(--header-bg);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+header nav ul li {
+  margin: 0 15px;
+}
+
+header nav ul li a {
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: #0056b3; /* Darker blue on hover */
+}
+
+/*- Main Content -*/
+main {
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+section {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/*- Hero Section -*/
+#hero {
+  background: linear-gradient(to right, #007bff, #0056b3);
+  color: #ffffff;
+  text-align: center;
+  border-radius: 8px;
+}
+
+#hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.cta-button {
+  display: inline-block;
+  background: var(--primary-color);
+  color: #ffffff;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  border: 2px solid var(--primary-color);
+}
+
+.cta-button:hover {
+  background: #0056b3;
+  border-color: #0056b3;
+}
+
+/*- Services Section -*/
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.service-item {
+  padding: 1.5rem;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.service-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/*- Contact Form -*/
+form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+form label {
+  font-weight: bold;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  width: auto;
+  justify-self: start;
+}
+
+/*- Footer -*/
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  background: var(--footer-bg);
+  color: var(--footer-text);
+  margin-top: 2rem;
+}
